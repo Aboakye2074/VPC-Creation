@@ -1,7 +1,13 @@
-resource “aws_route_table_association” “associate_2”{
- subnet_id = aws_subnet.prisub.id
- route_table_id = aws_route_table.testtab2.id
-depends_on = [
-    aws_subnet.prisub,
+resource aws_subnet privatesub {
+  vpc_id     = aws_vpc.myvpc.id
+  cidr_block = "192.168.1.0/24"
+  availability_zone = "us-west-1b"
+  map_public_ip_on_launch = "false"
+  depends_on = [
+    aws_vpc.myvpc,
   ]
+  tags = {
+    Name = "privatesub"
+  }
 }
+
