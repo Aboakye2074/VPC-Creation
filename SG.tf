@@ -1,5 +1,5 @@
-resource "aws_security_group" "test4" {
-  name        = "test4"
+resource "aws_security_group" "task4" {
+  name        = "taskt4"
   description = "Allow inbound traffic"
   vpc_id      = aws_vpc.myvpc.id
 ingress {
@@ -24,6 +24,6 @@ depends_on = [
     aws_vpc.myvpc,
   ]
 tags = {
-    Name = "test4"
+    Name = "task4"
   }
 }
