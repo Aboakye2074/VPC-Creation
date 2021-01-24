@@ -1,8 +1,8 @@
-resource “aws_nat_gateway” “testnat1”{
- allocation_id = aws_eip.test_eip.id
- subnet_id = aws_subnet.pubsub.id
+resource aws_nat_gateway nicronat1{
+ allocation_id = aws_eip.nicro_eip.id
+ subnet_id = aws_subnet.publicsub.id
 tags = {
- Name = “testnat1”
- 
+ Name = "nicronat1"
+
 }
 }
