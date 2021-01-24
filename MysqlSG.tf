@@ -1,7 +1,7 @@
 resource "aws_security_group" "MysqlSG" {
   name        = "basic"
   description = "Allow TLS inbound traffic"
-  vpc_id      = "aws_vpc.mvpc.id"
+  vpc_id      = aws_vpc.mvpc.id
   ingress {
     description = "mysql"
     from_port   = 3306
