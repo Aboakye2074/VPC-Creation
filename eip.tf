@@ -1,3 +1,3 @@
-resource “aws_eip” “test_eip”{
+resource aws_eip test_eip {
  vpc = true 
 }
